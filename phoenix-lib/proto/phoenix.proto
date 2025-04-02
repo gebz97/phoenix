@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+message NetworkInterface {
+    string address = 1;
+    string network = 2;
+    int32 prefix = 3;
+    string type = 4;
+    int32 mtu = 5;
+    string name = 6;
+    string mac_addr = 7;
+    string alias = 8;
+    string gateway = 9;
+    bool state = 10;
+}
+
+message User {
+    int32 uid = 1;
+    int32 gid = 2;
+    bool enabled = 3;
+    string shell = 4;
+    string home = 5;
+    string expire_date = 6;
+    string comment = 7;
+    repeated int32 group_ids = 8;
+    repeated string groups = 9;
+    bool system_user = 10;
+}
+
+message Disk {
+    string id = 1;
+    string vendor_name = 2;
+    string wwn = 3;
+    
+}
+
+message ClientInfo {
+    string uuid = 1;
+    string default_ipv4_addr = 2;
+    string hostname = 3;
+    string fqdn = 4;
+    string domain = 5;
+    string arch = 6;
+    string bios_date = 7;
+    string bios_vendor = 8;
+    string board_name = 9;
+    string board_vendor = 10;
+    // PLACEHOLDER FOR 11
+    string distribution = 12;
+    int32 distribution_major_version = 13;
+    int32 distribution_minor_version = 14;
+    string distribution_release = 15;
+    repeated string dns_nameserver = 16;
+    repeated string search_domain = 17;
+    repeated User users = 18;
+    int64 uptime = 19;
+    int32 processor_count = 20;
+    int32 processor_cores = 21;
+    string processor = 22;
+    int32 threads_per_core = 23;
+    int32 vcpus = 24;
+    // PLACEHOLDER FOR 25
+    string service_manager = 26;
+    int64 swap_total_mb = 27;
+    int64 mem_total_mb = 28;
+    string os_family = 29;
+    string pkg_mgr = 30;
+    string machine_id = 31;
+    string python_executable = 32;
+    string python_type = 33;
+    int32 python_version_major = 34;
+    int32 python_version_minor = 35;
+    int32 python_version_micro = 36;
+    string python_release_level = 37;
+    string python_version = 38;
+    string lsb_codename = 39;
+    string lsb_description = 40;
+    string lsb_id = 41;
+    int32 lsb_major_release = 42;
+    int32 lsb_release = 43;
+    string linux_cmdline_boot_image = 44;
+    bool linux_cmdline_ro = 45;
+    string linux_cmdline_root_uuid = 46;
+}

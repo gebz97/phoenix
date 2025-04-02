@@ -32,7 +32,7 @@ async fn main() -> tokio::io::Result<()> {
         }
         println!("Sent: {}", stats_string.trim());
 
-        sleep(Duration::from_secs(10)).await;
+        sleep(Duration::from_secs(1)).await;
     }
 
     Ok(())
