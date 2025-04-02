@@ -1,0 +1,10 @@
+[package]
+name = "phoenix-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chrono = "0.4.40"
+serde_json = "1.0.140"
+sysinfo = "0.34.1"
+tokio = {version = "1.44.1", features = ["full"]}
