@@ -1,0 +1,29 @@
+[package]
+name = "phoenix"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "phoenix-server"
+path = "src/server.rs"
+
+[[bin]]
+name = "phoenix-client"
+path = "src/client.rs"
+
+[[bin]]
+name = "phoenix-api"
+path = "src/api.rs"
+
+[dependencies]
+config = "0.15.11"
+serde = "1.0.219"
+sysinfo = "0.34.1"
+serde_json = "1.0.140"
+tokio = {version = "1.44.1", features = ["full"]}
+tokio-postgres = "0.7.13"
+prost = "0.13.5"
+tonic = "0.13.0"
+
+[build-dependencies]
+tonic-build = "0.13.0"

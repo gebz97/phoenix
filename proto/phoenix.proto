@@ -44,7 +44,7 @@ message ClientInfo {
     string bios_vendor = 8;
     string board_name = 9;
     string board_vendor = 10;
-    // PLACEHOLDER FOR 11
+    string kernel_version = 11;
     string distribution = 12;
     int32 distribution_major_version = 13;
     int32 distribution_minor_version = 14;
